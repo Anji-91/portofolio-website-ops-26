@@ -3,6 +3,7 @@ import HeroSection from "../components/HeroSection";
 import ImagePortfolio from "../components/ImagePortfolio";
 import SkillsSection from "../components/SkillsSection";
 import Navbar from "../components/Navbar";
+import SocialMedia from "../components/SocialMedia";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <HeroSection />
       <ImagePortfolio />
       <SkillsSection />
+      <SocialMedia />
     </motion.div>
   );
 };
