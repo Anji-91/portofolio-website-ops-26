@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import HeroSection from "../components/HeroSection";
 import ImagePortfolio from "../components/ImagePortfolio";
 import SkillsSection from "../components/SkillsSection";
+import Navbar from "../components/Navbar";
 
 const Index = () => {
   return (
@@ -11,6 +12,7 @@ const Index = () => {
       transition={{ duration: 0.5 }}
       className="bg-secondary min-h-screen"
     >
+      <Navbar />
       <HeroSection />
       <ImagePortfolio />
       <SkillsSection />
