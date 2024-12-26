@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import HeroSection from "../components/HeroSection";
 import ImagePortfolio from "../components/ImagePortfolio";
+import SkillsSection from "../components/SkillsSection";
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
     >
       <HeroSection />
       <ImagePortfolio />
+      <SkillsSection />
     </motion.div>
   );
 };
