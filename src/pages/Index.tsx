@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import HeroSection from "../components/HeroSection";
-import PortfolioGrid from "../components/PortfolioGrid";
-import ContactSection from "../components/ContactSection";
+import ImagePortfolio from "../components/ImagePortfolio";
 
 const Index = () => {
   return (
@@ -12,8 +11,7 @@ const Index = () => {
       className="bg-secondary min-h-screen"
     >
       <HeroSection />
-      <PortfolioGrid />
-      <ContactSection />
+      <ImagePortfolio />
     </motion.div>
   );
 };
