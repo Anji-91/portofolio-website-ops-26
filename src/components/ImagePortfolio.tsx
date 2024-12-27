@@ -64,22 +64,22 @@ const ImagePortfolio = () => {
               key={item.id}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              whileHover={{ y: -10 }}
+              whileHover={{ y: -10, transition: { duration: 0.3, ease: [0.4, 0, 0.2, 1] } }}
               transition={{
                 duration: 0.3,
                 ease: "easeOut"
               }}
-              className="group relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm"
+              className="group relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm transition-all duration-300"
             >
               <div className="aspect-w-16 aspect-h-12">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="object-cover w-full h-full transform transition-transform duration-300 group-hover:scale-110"
+                  className="object-cover w-full h-full transform transition-all duration-500 ease-out group-hover:scale-110"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-6">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
                   <span className="text-sm text-primary font-medium mb-2 block">
                     {item.category}
                   </span>

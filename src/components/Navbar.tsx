@@ -17,8 +17,11 @@ const Navbar = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <motion.span 
-            whileHover={{ scale: 1.05 }}
-            className="text-xl font-bold text-white cursor-pointer"
+            whileHover={{ 
+              scale: 1.05,
+              transition: { duration: 0.3, ease: [0.4, 0, 0.2, 1] }
+            }}
+            className="text-xl font-bold text-white cursor-pointer transition-all duration-300"
             onClick={() => scrollToSection('hero')}
           >
             Portfolio
@@ -32,10 +35,13 @@ const Navbar = () => {
             ].map((item) => (
               <motion.button
                 key={item.id}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ 
+                  scale: 1.05,
+                  transition: { duration: 0.3, ease: [0.4, 0, 0.2, 1] }
+                }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item.id)}
-                className="flex items-center space-x-2 text-white/70 hover:text-white transition-colors"
+                className="flex items-center space-x-2 text-white/70 hover:text-white transition-all duration-300"
               >
                 <item.icon className="w-4 h-4" />
                 <span>{item.label}</span>
@@ -51,10 +57,13 @@ const Navbar = () => {
             ].map((item) => (
               <motion.button
                 key={item.id}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ 
+                  scale: 1.05,
+                  transition: { duration: 0.3, ease: [0.4, 0, 0.2, 1] }
+                }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item.id)}
-                className="text-white/70 hover:text-white transition-colors p-2"
+                className="text-white/70 hover:text-white transition-all duration-300 p-2"
               >
                 <item.icon className="w-5 h-5" />
               </motion.button>

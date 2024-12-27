@@ -66,14 +66,17 @@ const SocialMedia = () => {
               href={social.url}
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.2 }}
+              whileHover={{ 
+                scale: 1.2,
+                transition: { duration: 0.3, ease: [0.4, 0, 0.2, 1] }
+              }}
               whileTap={{ scale: 0.9 }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className={`p-3 rounded-full bg-white/5 backdrop-blur-sm ${social.color} transition-colors duration-300`}
+              transition={{ delay: index * 0.1, duration: 0.3, ease: "easeOut" }}
+              className={`p-3 rounded-full bg-white/5 backdrop-blur-sm ${social.color} transition-all duration-300 hover:bg-white/10`}
             >
-              <social.icon className="w-6 h-6" />
+              <social.icon className="w-6 h-6 transition-transform duration-300" />
             </motion.a>
           ))}
         </motion.div>
