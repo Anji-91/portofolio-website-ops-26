@@ -54,8 +54,8 @@ const SkillsSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -72,28 +72,54 @@ const SkillsSection = () => {
               key={skill.name}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white/5 backdrop-blur-sm rounded-xl p-6"
+              transition={{ 
+                duration: 0.8, 
+                delay: index * 0.15,
+                ease: "easeOut"
+              }}
+              viewport={{ once: true, margin: "-50px" }}
+              className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-colors duration-300"
             >
               <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 rounded-lg bg-white/10">
+                <motion.div 
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ 
+                    duration: 0.5, 
+                    delay: index * 0.15 + 0.3,
+                    type: "spring",
+                    stiffness: 200
+                  }}
+                  className="p-3 rounded-lg bg-white/10"
+                >
                   <skill.icon className="w-6 h-6 text-primary" />
-                </div>
+                </motion.div>
                 <h3 className="text-xl font-semibold text-white">{skill.name}</h3>
               </div>
               <div className="h-2 bg-white/10 rounded-full overflow-hidden">
                 <motion.div
                   initial={{ width: 0 }}
                   whileInView={{ width: `${skill.level}%` }}
-                  transition={{ duration: 1, ease: "easeOut" }}
+                  transition={{ 
+                    duration: 1.2, 
+                    delay: index * 0.15 + 0.5,
+                    ease: [0.4, 0, 0.2, 1]
+                  }}
                   viewport={{ once: true }}
                   className={`h-full ${skill.color}`}
                 />
               </div>
-              <span className="text-sm text-neutral mt-2 block">
+              <motion.span 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ 
+                  duration: 0.5, 
+                  delay: index * 0.15 + 1
+                }}
+                className="text-sm text-neutral mt-2 block"
+              >
                 {skill.level}%
-              </span>
+              </motion.span>
             </motion.div>
           ))}
         </div>
