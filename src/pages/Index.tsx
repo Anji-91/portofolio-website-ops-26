@@ -5,6 +5,7 @@ import SkillsSection from "../components/SkillsSection";
 import Navbar from "../components/Navbar";
 import SocialMedia from "../components/SocialMedia";
 import ImageSlider from "../components/ImageSlider";
+import ImageSliderLogo from "../components/ImageSliderLogo";
 import { useEffect } from "react";
 
 const Index = () => {
@@ -15,7 +16,7 @@ const Index = () => {
         e.preventDefault();
         const href = this.getAttribute('href');
         if (href) {
-          document.querySelector(href)?.scrollInView({
+          document.querySelector(href)?.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
           });
@@ -34,6 +35,7 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <ImageSlider />
+      <ImageSliderLogo />
       <ImagePortfolio />
       <SkillsSection />
       <SocialMedia />
