@@ -11,13 +11,13 @@ const socialLinks = [
   {
     name: "Instagram",
     icon: Instagram,
-    url: "https://instagram.com",
+    url: "https://https://www.instagram.com/muhammmad_iqbaaal/",
     color: "hover:text-pink-500",
   },
   {
     name: "LinkedIn",
     icon: Linkedin,
-    url: "https://linkedin.com",
+    url: "https://www.linkedin.com/in/muhammad-iqbal-289a782b9/",
     color: "hover:text-blue-600",
   },
   {
