@@ -40,7 +40,7 @@ const skills = [
     color: "bg-primary"
   },
   {
-    name: "3D Modeling",
+    name: "Social Media Design",
     level: 70,
     icon: Box,
     color: "bg-accent"
