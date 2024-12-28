@@ -47,8 +47,14 @@ const ImageSliderLogo = () => {
   }, []);
 
   return (
-    <section className="py-12 sm:py-16 bg-secondary overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6">
+    <section className="relative py-12 sm:py-16 bg-secondary overflow-hidden">
+      {/* Acernity UI inspired background pattern */}
+      <div className="absolute inset-0 w-full h-full">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+        <div className="absolute left-0 right-0 top-0 h-96 bg-gradient-to-br from-primary/20 via-accent/20 to-secondary blur-3xl opacity-50" />
+      </div>
+
+      <div className="container relative mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
