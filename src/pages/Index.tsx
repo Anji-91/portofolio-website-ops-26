@@ -4,13 +4,11 @@ import ImagePortfolio from "../components/ImagePortfolio";
 import SkillsSection from "../components/SkillsSection";
 import Navbar from "../components/Navbar";
 import SocialMedia from "../components/SocialMedia";
-import ImageSlider from "../components/ImageSlider";
 import ImageSliderLogo from "../components/ImageSliderLogo";
 import { useEffect } from "react";
 
 const Index = () => {
   useEffect(() => {
-    // Add smooth scroll behavior to all internal links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -34,7 +32,6 @@ const Index = () => {
     >
       <Navbar />
       <HeroSection />
-      <ImageSlider />
       <ImageSliderLogo />
       <ImagePortfolio />
       <SkillsSection />

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Home, Image, Brain, Play } from "lucide-react";
+import { Home, Image, Brain } from "lucide-react";
 
 const Navbar = () => {
   const scrollToSection = (sectionId: string) => {
@@ -33,7 +33,6 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8">
             {[
               { id: 'hero', label: 'Home', icon: Home },
-              { id: 'slider', label: 'Featured', icon: Play },
               { id: 'portfolio', label: 'Portfolio', icon: Image },
               { id: 'skills', label: 'Skills', icon: Brain },
             ].map((item) => (
@@ -56,7 +55,6 @@ const Navbar = () => {
           <div className="md:hidden flex items-center space-x-4">
             {[
               { id: 'hero', icon: Home },
-              { id: 'slider', icon: Play },
               { id: 'portfolio', icon: Image },
               { id: 'skills', icon: Brain },
             ].map((item) => (
