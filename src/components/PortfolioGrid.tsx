@@ -23,27 +23,27 @@ const projects = [
 
 const PortfolioGrid = () => {
   return (
-    <section className="py-20 bg-secondary">
-      <div className="container mx-auto px-6">
+    <section className="py-12 sm:py-20 bg-secondary">
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-16"
         >
-          <span className="inline-block px-3 py-1 mb-4 text-sm font-medium bg-primary/10 rounded-full text-primary">
+          <span className="inline-block px-3 py-1 mb-3 sm:mb-4 text-xs sm:text-sm font-medium bg-primary/10 rounded-full text-primary">
             Portfolio
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4">
             Selected Works
           </h2>
-          <p className="text-neutral max-w-2xl mx-auto">
+          <p className="text-neutral max-w-2xl mx-auto text-sm sm:text-base px-4">
             A curated selection of my latest projects and creative endeavors.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {projects.map((project) => (
             <motion.div
               key={project.id}
@@ -62,11 +62,11 @@ const PortfolioGrid = () => {
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <span className="text-sm text-primary mb-2 block">
+                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
+                  <span className="text-xs sm:text-sm text-primary mb-1 sm:mb-2 block">
                     {project.category}
                   </span>
-                  <h3 className="text-xl font-bold text-white">
+                  <h3 className="text-lg sm:text-xl font-bold text-white">
                     {project.title}
                   </h3>
                 </div>

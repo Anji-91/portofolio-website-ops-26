@@ -36,19 +36,19 @@ const socialLinks = [
 
 const SocialMedia = () => {
   return (
-    <section className="py-16 bg-secondary">
-      <div className="container mx-auto px-6">
+    <section className="py-12 sm:py-16 bg-secondary">
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4">
             Connect With Me
           </h2>
-          <p className="text-neutral max-w-2xl mx-auto">
+          <p className="text-neutral max-w-2xl mx-auto text-sm sm:text-base">
             Let's stay connected through social media
           </p>
         </motion.div>
@@ -58,7 +58,7 @@ const SocialMedia = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="flex justify-center items-center space-x-8"
+          className="flex flex-wrap justify-center items-center gap-4 sm:gap-8"
         >
           {socialLinks.map((social, index) => (
             <motion.a
@@ -74,9 +74,9 @@ const SocialMedia = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.3, ease: "easeOut" }}
-              className={`p-3 rounded-full bg-white/5 backdrop-blur-sm ${social.color} transition-all duration-300 hover:bg-white/10`}
+              className={`p-2.5 sm:p-3 rounded-full bg-white/5 backdrop-blur-sm ${social.color} transition-all duration-300 hover:bg-white/10`}
             >
-              <social.icon className="w-6 h-6 transition-transform duration-300" />
+              <social.icon className="w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-300" />
             </motion.a>
           ))}
         </motion.div>
