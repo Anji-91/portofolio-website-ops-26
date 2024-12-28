@@ -47,24 +47,24 @@ const ImageSliderLogo = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-secondary overflow-hidden">
+    <section className="py-12 sm:py-16 bg-secondary overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent animate-pulse">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent animate-pulse">
             Technologies We Use
           </h2>
-          <p className="text-neutral max-w-2xl mx-auto">
+          <p className="text-neutral max-w-2xl mx-auto text-sm sm:text-base">
             Powered by cutting-edge technologies
           </p>
         </motion.div>
 
-        <div className="relative w-full max-w-5xl mx-auto">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 sm:gap-8 py-8">
+        <div className="relative w-full max-w-4xl mx-auto">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4 sm:gap-6 py-4 sm:py-6">
             {logos.map((logo, index) => (
               <motion.div
                 key={logo.id}
@@ -72,7 +72,7 @@ const ImageSliderLogo = () => {
                 animate={{ 
                   opacity: 1, 
                   scale: 1,
-                  y: index === currentIndex ? -20 : 0
+                  y: index === currentIndex ? -10 : 0
                 }}
                 transition={{
                   duration: 0.5,
@@ -84,19 +84,19 @@ const ImageSliderLogo = () => {
                 onHoverEnd={() => setIsHovered(null)}
               >
                 <motion.div
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  className={`w-full aspect-square max-w-[150px] mx-auto bg-gradient-to-br ${logo.color} bg-opacity-10 backdrop-blur-sm rounded-2xl p-4 flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/20`}
+                  whileHover={{ scale: 1.05, rotate: 3 }}
+                  className={`w-full aspect-square max-w-[100px] mx-auto bg-gradient-to-br ${logo.color} bg-opacity-10 backdrop-blur-sm rounded-xl p-3 flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/20`}
                   style={{
-                    boxShadow: isHovered === index ? "0 0 20px rgba(155, 135, 245, 0.3)" : "none"
+                    boxShadow: isHovered === index ? "0 0 15px rgba(155, 135, 245, 0.2)" : "none"
                   }}
                 >
                   <motion.img
                     src={logo.url}
                     alt={logo.name}
-                    className="w-12 h-12 md:w-16 md:h-16 object-contain filter brightness-0 invert opacity-70 group-hover:opacity-100 transition-all duration-300"
+                    className="w-8 h-8 sm:w-10 sm:h-10 object-contain filter brightness-0 invert opacity-70 group-hover:opacity-100 transition-all duration-300"
                     whileHover={{ scale: 1.1 }}
                     animate={{
-                      rotate: isHovered === index ? [0, -5, 5, -5, 0] : 0
+                      rotate: isHovered === index ? [0, -3, 3, -3, 0] : 0
                     }}
                     transition={{
                       duration: 0.5,
@@ -105,13 +105,13 @@ const ImageSliderLogo = () => {
                   />
                 </motion.div>
                 <motion.div
-                  initial={{ opacity: 0, y: 10 }}
+                  initial={{ opacity: 0, y: 5 }}
                   animate={{ 
                     opacity: isHovered === index ? 1 : 0,
-                    y: isHovered === index ? 0 : 10
+                    y: isHovered === index ? 0 : 5
                   }}
                   transition={{ duration: 0.2 }}
-                  className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-sm font-medium bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent whitespace-nowrap"
+                  className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs sm:text-sm font-medium bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent whitespace-nowrap"
                 >
                   {logo.name}
                 </motion.div>
