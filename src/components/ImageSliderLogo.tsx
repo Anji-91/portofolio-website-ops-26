@@ -85,13 +85,13 @@ const ImageSliderLogo = () => {
                   ease: [0.4, 0, 0.2, 1],
                   delay: index * 0.1
                 }}
-                className="relative group"
+                className="relative group flex flex-col items-center"
                 onHoverStart={() => setIsHovered(index)}
                 onHoverEnd={() => setIsHovered(null)}
               >
                 <motion.div
                   whileHover={{ scale: 1.05, rotate: 3 }}
-                  className={`relative w-full aspect-square max-w-[80px] mx-auto bg-gradient-to-br ${logo.color} bg-opacity-10 backdrop-blur-sm rounded-lg p-2 sm:p-3 flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/20`}
+                  className={`w-full aspect-square max-w-[80px] mx-auto bg-gradient-to-br ${logo.color} bg-opacity-10 backdrop-blur-sm rounded-lg p-2 sm:p-3 flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/20`}
                   style={{
                     boxShadow: isHovered === index ? "0 0 15px rgba(155, 135, 245, 0.2)" : "none"
                   }}
@@ -109,17 +109,17 @@ const ImageSliderLogo = () => {
                       ease: "easeInOut"
                     }}
                   />
-                  <motion.div
-                    initial={{ opacity: 0, y: 5 }}
-                    animate={{ 
-                      opacity: isHovered === index ? 1 : 0,
-                      y: isHovered === index ? 0 : 5
-                    }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute bottom-0 left-1/2 -translate-x-1/2 text-[10px] sm:text-xs font-medium bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent whitespace-nowrap"
-                  >
-                    {logo.name}
-                  </motion.div>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 5 }}
+                  animate={{ 
+                    opacity: isHovered === index ? 1 : 0,
+                    y: isHovered === index ? 0 : 5
+                  }}
+                  transition={{ duration: 0.2 }}
+                  className="mt-2 text-[10px] sm:text-xs font-medium bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent whitespace-nowrap"
+                >
+                  {logo.name}
                 </motion.div>
               </motion.div>
             ))}
