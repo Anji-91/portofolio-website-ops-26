@@ -47,7 +47,7 @@ const ImageSliderLogo = () => {
   }, []);
 
   return (
-    <section className="relative py-12 sm:py-16 bg-secondary overflow-hidden">
+    <section className="relative py-8 sm:py-12 bg-secondary overflow-hidden">
       {/* Acernity UI inspired background pattern */}
       <div className="absolute inset-0 w-full h-full">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
@@ -59,18 +59,18 @@ const ImageSliderLogo = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-8 sm:mb-12"
+          className="text-center mb-6 sm:mb-8"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent animate-pulse">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent animate-pulse">
             Technologies We Use
           </h2>
-          <p className="text-neutral max-w-2xl mx-auto text-sm sm:text-base">
+          <p className="text-neutral max-w-2xl mx-auto text-xs sm:text-sm">
             Powered by cutting-edge technologies
           </p>
         </motion.div>
 
-        <div className="relative w-full max-w-4xl mx-auto">
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4 sm:gap-6 py-4 sm:py-6">
+        <div className="relative w-full max-w-3xl mx-auto">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2 sm:gap-4 py-2 sm:py-4">
             {logos.map((logo, index) => (
               <motion.div
                 key={logo.id}
@@ -78,7 +78,7 @@ const ImageSliderLogo = () => {
                 animate={{ 
                   opacity: 1, 
                   scale: 1,
-                  y: index === currentIndex ? -10 : 0
+                  y: index === currentIndex ? -8 : 0
                 }}
                 transition={{
                   duration: 0.5,
@@ -91,7 +91,7 @@ const ImageSliderLogo = () => {
               >
                 <motion.div
                   whileHover={{ scale: 1.05, rotate: 3 }}
-                  className={`w-full aspect-square max-w-[100px] mx-auto bg-gradient-to-br ${logo.color} bg-opacity-10 backdrop-blur-sm rounded-xl p-3 flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/20`}
+                  className={`w-full aspect-square max-w-[80px] mx-auto bg-gradient-to-br ${logo.color} bg-opacity-10 backdrop-blur-sm rounded-lg p-2 sm:p-3 flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/20`}
                   style={{
                     boxShadow: isHovered === index ? "0 0 15px rgba(155, 135, 245, 0.2)" : "none"
                   }}
@@ -99,7 +99,7 @@ const ImageSliderLogo = () => {
                   <motion.img
                     src={logo.url}
                     alt={logo.name}
-                    className="w-8 h-8 sm:w-10 sm:h-10 object-contain filter brightness-0 invert opacity-70 group-hover:opacity-100 transition-all duration-300"
+                    className="w-6 h-6 sm:w-8 sm:h-8 object-contain filter brightness-0 invert opacity-70 group-hover:opacity-100 transition-all duration-300"
                     whileHover={{ scale: 1.1 }}
                     animate={{
                       rotate: isHovered === index ? [0, -3, 3, -3, 0] : 0
@@ -117,7 +117,7 @@ const ImageSliderLogo = () => {
                     y: isHovered === index ? 0 : 5
                   }}
                   transition={{ duration: 0.2 }}
-                  className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs sm:text-sm font-medium bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent whitespace-nowrap"
+                  className="absolute -bottom-4 left-1/2 -translate-x-1/2 text-[10px] sm:text-xs font-medium bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent whitespace-nowrap"
                 >
                   {logo.name}
                 </motion.div>
