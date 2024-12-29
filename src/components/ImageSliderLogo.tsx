@@ -6,31 +6,36 @@ const logos = [
     id: 1,
     url: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
     name: "React",
-    color: "from-blue-400 to-cyan-400"
+    color: "from-blue-400 to-cyan-400",
+    shape: "rounded-tr-3xl rounded-bl-3xl"
   },
   {
     id: 2,
     url: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
     name: "TypeScript",
-    color: "from-blue-600 to-blue-400"
+    color: "from-blue-600 to-blue-400",
+    shape: "rounded-tl-3xl rounded-br-3xl"
   },
   {
     id: 3,
     url: "https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg",
     name: "Vue",
-    color: "from-green-500 to-emerald-400"
+    color: "from-green-500 to-emerald-400",
+    shape: "rounded-t-3xl"
   },
   {
     id: 4,
     url: "https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg",
     name: "Sass",
-    color: "from-pink-500 to-rose-400"
+    color: "from-pink-500 to-rose-400",
+    shape: "rounded-b-3xl"
   },
   {
     id: 5,
     url: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
     name: "Tailwind",
-    color: "from-cyan-500 to-blue-400"
+    color: "from-cyan-500 to-blue-400",
+    shape: "rounded-l-3xl"
   }
 ];
 
@@ -78,7 +83,8 @@ const ImageSliderLogo = () => {
                 animate={{ 
                   opacity: 1, 
                   scale: 1,
-                  y: index === currentIndex ? -8 : 0
+                  y: index === currentIndex ? -8 : 0,
+                  rotate: index === currentIndex ? 5 : 0
                 }}
                 transition={{
                   duration: 0.5,
@@ -91,7 +97,7 @@ const ImageSliderLogo = () => {
               >
                 <motion.div
                   whileHover={{ scale: 1.05, rotate: 3 }}
-                  className={`w-full aspect-square max-w-[80px] mx-auto bg-gradient-to-br ${logo.color} bg-opacity-10 backdrop-blur-sm rounded-lg p-2 sm:p-3 flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/20`}
+                  className={`w-full aspect-square max-w-[80px] mx-auto bg-gradient-to-br ${logo.color} bg-opacity-10 backdrop-blur-sm ${logo.shape} p-2 sm:p-3 flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/20`}
                   style={{
                     boxShadow: isHovered === index ? "0 0 15px rgba(155, 135, 245, 0.2)" : "none"
                   }}
