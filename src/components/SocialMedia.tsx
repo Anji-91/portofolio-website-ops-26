@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const socialLinks = [
   {
@@ -34,7 +35,46 @@ const socialLinks = [
   },
 ];
 
+const words = [
+  "Connect With Me",
+  "Let's Collaborate",
+  "Get in Touch",
+  "Follow Me",
+];
+
 const SocialMedia = () => {
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [currentText, setCurrentText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const word = words[currentWordIndex];
+    const typeSpeed = isDeleting ? 50 : 100;
+
+    if (!isDeleting && currentText === word) {
+      // Wait before starting to delete
+      setTimeout(() => setIsDeleting(true), 2000);
+      return;
+    }
+
+    if (isDeleting && currentText === "") {
+      setIsDeleting(false);
+      setCurrentWordIndex((prev) => (prev + 1) % words.length);
+      return;
+    }
+
+    const timeout = setTimeout(() => {
+      setCurrentText(prev => {
+        if (isDeleting) {
+          return prev.slice(0, -1);
+        }
+        return word.slice(0, prev.length + 1);
+      });
+    }, typeSpeed);
+
+    return () => clearTimeout(timeout);
+  }, [currentText, isDeleting, currentWordIndex]);
+
   return (
     <section className="py-12 sm:py-16 bg-secondary">
       <div className="container mx-auto px-4 sm:px-6">
@@ -45,8 +85,9 @@ const SocialMedia = () => {
           viewport={{ once: true }}
           className="text-center mb-8 sm:mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4">
-            Connect With Me
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4 min-h-[60px]">
+            {currentText}
+            <span className="animate-pulse">|</span>
           </h2>
           <p className="text-neutral max-w-2xl mx-auto text-sm sm:text-base">
             Let's stay connected through social media
