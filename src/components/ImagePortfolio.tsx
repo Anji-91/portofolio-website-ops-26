@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 const portfolioImages = [
   {
@@ -40,15 +41,39 @@ const portfolioImages = [
 ];
 
 const ImagePortfolio = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"]
+  });
+
+  const x = useTransform(scrollYProgress, [0, 1], [0, -600]);
+  const x2 = useTransform(scrollYProgress, [0, 1], [0, 600]);
+
   return (
-    <section id="portfolio" className="py-20 bg-secondary">
+    <section id="portfolio" className="py-20 bg-secondary overflow-hidden" ref={containerRef}>
       <div className="container mx-auto px-6">
+        <div className="relative">
+          <motion.div
+            style={{ x }}
+            className="absolute -left-20 whitespace-nowrap text-[130px] md:text-[200px] font-bold text-white/5"
+          >
+            PORTFOLIO PORTFOLIO
+          </motion.div>
+          <motion.div
+            style={{ x: x2 }}
+            className="absolute -left-20 top-24 whitespace-nowrap text-[130px] md:text-[200px] font-bold text-white/5"
+          >
+            SHOWCASE SHOWCASE
+          </motion.div>
+        </div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-16 relative z-10 pt-40"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Portfolio
@@ -58,7 +83,7 @@ const ImagePortfolio = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
           {portfolioImages.map((item) => (
             <motion.div
               key={item.id}
