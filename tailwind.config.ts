@@ -67,6 +67,10 @@ export default {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        "gradient-text-slide": {
+          "0%": { backgroundPosition: "0% center" },
+          "100%": { backgroundPosition: "-200% center" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -74,6 +78,7 @@ export default {
         float: "float 6s ease-in-out infinite",
         "fade-up": "fade-up 0.5s ease-out",
         "fade-in": "fade-in 0.5s ease-out",
+        "gradient-text-slide": "gradient-text-slide 3s linear infinite",
       },
     },
   },

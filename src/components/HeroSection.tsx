@@ -20,9 +20,18 @@ const HeroSection = () => {
           <span className="inline-block px-3 py-1 mb-4 sm:mb-6 text-xs sm:text-sm font-medium bg-white/10 backdrop-blur-sm rounded-full text-white">
             Creative Designer
           </span>
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80">
-            Crafting Digital
-            <br /> Experiences
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6">
+            <span className="inline-flex flex-col h-[calc(theme(fontSize.7xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.7xl)*theme(lineHeight.tight))] overflow-hidden">
+              <span className="animate-gradient-text-slide text-transparent bg-clip-text bg-[linear-gradient(to_right,theme(colors.purple.400),theme(colors.purple.600),theme(colors.blue.400),theme(colors.purple.400))] bg-[length:200%_auto] motion-reduce:animate-none">
+                Crafting Digital
+              </span>
+            </span>
+            <br />
+            <span className="inline-flex flex-col h-[calc(theme(fontSize.7xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.7xl)*theme(lineHeight.tight))] overflow-hidden">
+              <span className="animate-gradient-text-slide text-transparent bg-clip-text bg-[linear-gradient(to_right,theme(colors.purple.400),theme(colors.purple.600),theme(colors.blue.400),theme(colors.purple.400))] bg-[length:200%_auto] motion-reduce:animate-none">
+                Experiences
+              </span>
+            </span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-white/80 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
             Transforming ideas into visually stunning realities through innovative design and creative solutions.
