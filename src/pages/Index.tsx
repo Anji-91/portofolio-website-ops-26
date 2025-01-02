@@ -5,6 +5,7 @@ import SkillsSection from "../components/SkillsSection";
 import Navbar from "../components/Navbar";
 import SocialMedia from "../components/SocialMedia";
 import ImageSliderLogo from "../components/ImageSliderLogo";
+import BackToTop from "../components/BackToTop";
 import { useEffect } from "react";
 
 const Index = () => {
@@ -17,7 +18,7 @@ const Index = () => {
         if (href) {
           const target = document.querySelector(href);
           if (target) {
-            const headerOffset = 80; // Adjust based on your header height
+            const headerOffset = 80;
             const elementPosition = target.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -55,6 +56,7 @@ const Index = () => {
       <ImagePortfolio />
       <SkillsSection />
       <SocialMedia />
+      <BackToTop />
     </motion.div>
   );
 };
