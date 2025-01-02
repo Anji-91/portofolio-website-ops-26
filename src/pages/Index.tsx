@@ -9,18 +9,37 @@ import { useEffect } from "react";
 
 const Index = () => {
   useEffect(() => {
+    // Smooth scroll behavior for all internal links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const href = this.getAttribute('href');
         if (href) {
-          document.querySelector(href)?.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
+          const target = document.querySelector(href);
+          if (target) {
+            const headerOffset = 80; // Adjust based on your header height
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
         }
       });
     });
+
+    // Fix for iOS momentum scrolling
+    document.addEventListener('touchmove', function(e) {
+      e.preventDefault();
+    }, { passive: true });
+
+    return () => {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.removeEventListener('click', () => {});
+      });
+    };
   }, []);
 
   return (
