@@ -72,50 +72,70 @@ const SkillsSection = () => {
               key={skill.name}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
+              whileHover={{ 
+                scale: 1.02,
+                rotateX: 5,
+                boxShadow: "0 20px 30px rgba(0,0,0,0.2)"
+              }}
               transition={{ 
-                duration: 0.8, 
-                delay: index * 0.15,
-                ease: "easeOut"
+                duration: 0.3,
+                type: "spring",
+                stiffness: 300,
+                damping: 20
               }}
               viewport={{ once: true, margin: "-50px" }}
-              className="bg-white/5 backdrop-blur-sm rounded-xl p-4 sm:p-6 hover:bg-white/10 transition-colors duration-300"
+              className="bg-white/5 backdrop-blur-sm rounded-xl p-4 sm:p-6 hover:bg-white/10 transition-all duration-300 transform-gpu"
             >
               <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
                 <motion.div 
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
+                  whileHover={{ 
+                    scale: 1.2,
+                    rotate: 360,
+                  }}
                   transition={{ 
-                    duration: 0.5, 
-                    delay: index * 0.15 + 0.3,
+                    duration: 0.5,
                     type: "spring",
-                    stiffness: 200
+                    stiffness: 260,
+                    damping: 20
                   }}
                   className="p-2 sm:p-3 rounded-lg bg-white/10"
                 >
                   <skill.icon className="w-4 h-4 sm:w-6 sm:h-6 text-primary" />
                 </motion.div>
-                <h3 className="text-base sm:text-xl font-semibold text-white">{skill.name}</h3>
+                <motion.h3 
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  className="text-base sm:text-xl font-semibold text-white"
+                >
+                  {skill.name}
+                </motion.h3>
               </div>
               <div className="h-1.5 sm:h-2 bg-white/10 rounded-full overflow-hidden">
                 <motion.div
                   initial={{ width: 0 }}
                   whileInView={{ width: `${skill.level}%` }}
+                  whileHover={{ 
+                    scale: 1.05,
+                    transition: { duration: 0.2 }
+                  }}
                   transition={{ 
-                    duration: 1.2, 
-                    delay: index * 0.15 + 0.5,
+                    duration: 1.2,
                     ease: [0.4, 0, 0.2, 1]
                   }}
                   viewport={{ once: true }}
-                  className={`h-full ${skill.color}`}
+                  className={`h-full ${skill.color} transform-gpu`}
                 />
               </div>
               <motion.span 
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                transition={{ 
-                  duration: 0.5, 
-                  delay: index * 0.15 + 1
+                whileHover={{ 
+                  scale: 1.1,
+                  color: "rgb(var(--primary))"
                 }}
+                transition={{ duration: 0.2 }}
                 className="text-xs sm:text-sm text-neutral mt-1 sm:mt-2 block"
               >
                 {skill.level}%
