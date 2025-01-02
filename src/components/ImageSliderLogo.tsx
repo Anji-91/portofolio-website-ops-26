@@ -66,10 +66,10 @@ const ImageSliderLogo = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-6 sm:mb-8"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent animate-pulse">
+          <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent animate-pulse">
             Technologies We Use
           </h2>
-          <p className="text-neutral max-w-2xl mx-auto text-xs sm:text-sm">
+          <p className="text-neutral max-w-2xl mx-auto text-[10px] xs:text-xs sm:text-sm">
             Powered by cutting-edge technologies
           </p>
         </motion.div>
@@ -97,7 +97,7 @@ const ImageSliderLogo = () => {
               >
                 <motion.div
                   whileHover={{ scale: 1.05, rotate: 3 }}
-                  className={`w-full aspect-square max-w-[80px] mx-auto bg-gradient-to-br ${logo.color} bg-opacity-10 backdrop-blur-sm ${logo.shape} p-2 sm:p-3 flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/20`}
+                  className={`w-full aspect-square max-w-[60px] xs:max-w-[70px] sm:max-w-[80px] mx-auto bg-gradient-to-br ${logo.color} bg-opacity-10 backdrop-blur-sm ${logo.shape} p-1.5 xs:p-2 sm:p-3 flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/20`}
                   style={{
                     boxShadow: isHovered === index ? "0 0 15px rgba(155, 135, 245, 0.2)" : "none"
                   }}
@@ -105,7 +105,7 @@ const ImageSliderLogo = () => {
                   <motion.img
                     src={logo.url}
                     alt={logo.name}
-                    className="w-6 h-6 sm:w-8 sm:h-8 object-contain filter brightness-0 invert opacity-70 group-hover:opacity-100 transition-all duration-300"
+                    className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 object-contain filter brightness-0 invert opacity-70 group-hover:opacity-100 transition-all duration-300"
                     whileHover={{ scale: 1.1 }}
                     animate={{
                       rotate: isHovered === index ? [0, -3, 3, -3, 0] : 0
@@ -123,7 +123,7 @@ const ImageSliderLogo = () => {
                     y: isHovered === index ? 0 : 5
                   }}
                   transition={{ duration: 0.2 }}
-                  className="mt-2 text-[10px] sm:text-xs font-medium bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent whitespace-nowrap"
+                  className="mt-2 text-[8px] xs:text-[10px] sm:text-xs font-medium bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent whitespace-nowrap"
                 >
                   {logo.name}
                 </motion.div>
