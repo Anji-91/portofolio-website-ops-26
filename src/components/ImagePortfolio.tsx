@@ -53,7 +53,7 @@ const ImagePortfolio = () => {
   return (
     <section id="portfolio" className="py-20 bg-secondary overflow-hidden" ref={containerRef}>
       <div className="container mx-auto px-6">
-        <div className="relative">
+        <div className="relative -mt-20">
           <motion.div
             style={{ x }}
             className="absolute -left-20 whitespace-nowrap text-[130px] md:text-[200px] font-bold text-white/5"
