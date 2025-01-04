@@ -39,16 +39,16 @@ export default {
           foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "#0A0C12", // Darker shade
-          foreground: "#ffffff",
+          DEFAULT: "#F8F9FC", // Lighter shade
+          foreground: "#0A0C12",
         },
         accent: {
           DEFAULT: "#D6BCFA",
-          foreground: "#0A0C12",
+          foreground: "#F8F9FC",
         },
         neutral: {
           DEFAULT: "#8E9196",
-          foreground: "#ffffff",
+          foreground: "#0A0C12",
         },
       },
       borderRadius: {
