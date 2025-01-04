@@ -61,7 +61,7 @@ const Navbar = () => {
             onClick={() => scrollToSection('hero')}
           >
             <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient-text-slide">
-              anjani
+              Anjani
             </span>
           </motion.span>
           
