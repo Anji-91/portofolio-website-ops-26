@@ -39,12 +39,12 @@ export default {
           foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "#1A1F2C",
+          DEFAULT: "#0A0C12", // Darker shade
           foreground: "#ffffff",
         },
         accent: {
           DEFAULT: "#D6BCFA",
-          foreground: "#1A1F2C",
+          foreground: "#0A0C12",
         },
         neutral: {
           DEFAULT: "#8E9196",
