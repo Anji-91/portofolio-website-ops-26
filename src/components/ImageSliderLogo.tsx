@@ -18,24 +18,31 @@ const logos = [
   },
   {
     id: 3,
-    url: "https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg",
-    name: "Vue",
-    color: "from-green-500 to-emerald-400",
-    shape: "rounded-t-3xl"
-  },
-  {
-    id: 4,
-    url: "https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg",
-    name: "Sass",
-    color: "from-pink-500 to-rose-400",
-    shape: "rounded-b-3xl"
-  },
-  {
-    id: 5,
     url: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
     name: "Tailwind",
     color: "from-cyan-500 to-blue-400",
     shape: "rounded-l-3xl"
+  },
+  {
+    id: 4,
+    url: "https://www.svgrepo.com/show/354113/nextjs-icon.svg",
+    name: "Next.js",
+    color: "from-gray-600 to-gray-400",
+    shape: "rounded-r-3xl"
+  },
+  {
+    id: 5,
+    url: "https://www.svgrepo.com/show/452091/python.svg",
+    name: "Python",
+    color: "from-blue-500 to-yellow-400",
+    shape: "rounded-full"
+  },
+  {
+    id: 6,
+    url: "https://www.svgrepo.com/show/373595/firebase.svg",
+    name: "Firebase",
+    color: "from-yellow-500 to-orange-500",
+    shape: "rounded-xl"
   }
 ];
 

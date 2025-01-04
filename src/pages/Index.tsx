@@ -5,6 +5,7 @@ import SkillsSection from "../components/SkillsSection";
 import Navbar from "../components/Navbar";
 import SocialMedia from "../components/SocialMedia";
 import ImageSliderLogo from "../components/ImageSliderLogo";
+import ContactSection from "../components/ContactSection";
 import BackToTop from "../components/BackToTop";
 import { useEffect } from "react";
 
@@ -31,11 +32,6 @@ const Index = () => {
       });
     });
 
-    // Fix for iOS momentum scrolling
-    document.addEventListener('touchmove', function(e) {
-      e.preventDefault();
-    }, { passive: true });
-
     return () => {
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.removeEventListener('click', () => {});
@@ -55,6 +51,7 @@ const Index = () => {
       <ImageSliderLogo />
       <ImagePortfolio />
       <SkillsSection />
+      <ContactSection />
       <SocialMedia />
       <BackToTop />
     </motion.div>

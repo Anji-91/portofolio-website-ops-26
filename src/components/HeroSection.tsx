@@ -58,12 +58,12 @@ const HeroSection = () => {
           className="text-center max-w-4xl mx-auto"
         >
           <span className="inline-block px-3 py-1 mb-4 sm:mb-6 text-xs sm:text-sm font-medium bg-white/10 backdrop-blur-sm rounded-full text-white">
-            Creative Designer
+            Creative Developer
           </span>
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6">
             <span className="inline-flex flex-col h-[calc(theme(fontSize.7xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.7xl)*theme(lineHeight.tight))] overflow-hidden">
               <span className="animate-gradient-text-slide text-transparent bg-clip-text bg-[linear-gradient(to_right,theme(colors.purple.400),theme(colors.purple.600),theme(colors.blue.400),theme(colors.purple.400))] bg-[length:200%_auto] motion-reduce:animate-none">
-                Crafting Digital
+                Building Digital
               </span>
             </span>
             <br />
@@ -74,15 +74,24 @@ const HeroSection = () => {
             </span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-white/80 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-            Transforming ideas into visually stunning realities through innovative design and creative solutions.
+            Creating innovative digital solutions through creative development and modern design
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white text-secondary rounded-full font-medium transition-all hover:shadow-lg hover:shadow-white/20 text-sm sm:text-base"
-          >
-            View Portfolio
-          </motion.button>
+          <motion.div className="flex justify-center gap-4">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-6 sm:px-8 py-2.5 sm:py-3 bg-primary text-white rounded-full font-medium transition-all hover:shadow-lg hover:shadow-primary/20 text-sm sm:text-base"
+            >
+              View Projects
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white/10 backdrop-blur-sm text-white rounded-full font-medium transition-all hover:bg-white/20 text-sm sm:text-base"
+            >
+              Contact Me
+            </motion.button>
+          </motion.div>
         </motion.div>
       </div>
     </motion.section>
