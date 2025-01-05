@@ -9,9 +9,9 @@ const projects = [
   },
   {
     id: 2,
-    title: "UI/UX Design",
-    category: "Digital",
-    image: "https://images.unsplash.com/photo-1613909207039-6b173b755cc1?auto=format&fit=crop&w=800&q=80"
+    title: "AI Chatbot",
+    category: "Artificial Intelligence",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 3,
