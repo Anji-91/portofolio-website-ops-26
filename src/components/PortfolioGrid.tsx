@@ -9,7 +9,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "AI Chatbot",
+    title: "AI Chatbot Developer",
     category: "Artificial Intelligence",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"
   },
