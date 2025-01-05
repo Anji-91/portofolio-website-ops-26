@@ -10,21 +10,21 @@ const portfolioImages = [
   },
   {
     id: 2,
-    title: "Digital Art Creation",
-    category: "Digital Art",
-    image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=800&q=80"
+    title: "AI Chatbot Developer",
+    category: "Artificial Intelligence",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 3,
-    title: "UI/UX Design",
-    category: "Interface Design",
-    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 4,
     title: "Motion Graphics",
     category: "Animation",
     image: "https://images.unsplash.com/photo-1611162616475-46b635cb6868?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 4,
+    title: "Digital Art Creation",
+    category: "Digital Art",
+    image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 5,
