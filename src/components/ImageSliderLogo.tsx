@@ -4,23 +4,23 @@ import { useEffect, useState } from "react";
 const logos = [
   {
     id: 1,
-    url: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
-    name: "React",
-    color: "from-blue-400 to-cyan-400",
+    url: "https://www.svgrepo.com/show/354113/nextjs-icon.svg",
+    name: "HTML",
+    color: "from-orange-500 to-red-500",
     shape: "rounded-tr-3xl rounded-bl-3xl"
   },
   {
     id: 2,
-    url: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
-    name: "TypeScript",
-    color: "from-blue-600 to-blue-400",
+    url: "https://www.svgrepo.com/show/452091/python.svg",
+    name: "CapCut",
+    color: "from-purple-600 to-pink-400",
     shape: "rounded-tl-3xl rounded-br-3xl"
   },
   {
     id: 3,
-    url: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
-    name: "Tailwind",
-    color: "from-cyan-500 to-blue-400",
+    url: "https://www.svgrepo.com/show/354478/css-3.svg",
+    name: "CSS",
+    color: "from-blue-500 to-cyan-400",
     shape: "rounded-l-3xl"
   },
   {
