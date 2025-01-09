@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { 
   Brush, 
   Code2, 
-  PenTool, 
+  Bot, 
   Camera, 
   Film, 
   Box 
@@ -16,9 +16,9 @@ const skills = [
     color: "bg-gradient-to-r from-purple-500 to-pink-500"
   },
   {
-    name: "UI/UX Design",
+    name: "AI Chatbot Developer",
     level: 90,
-    icon: PenTool,
+    icon: Bot,
     color: "bg-gradient-to-r from-blue-500 to-cyan-500"
   },
   {
